@@ -153,7 +153,6 @@
 <div class="game-info">
 <div class="game-buttons">
 <button class="btn-icon" title="Fullscreen" onclick="open_fullscreen()" aria-label="Toggle fullscreen mode"><i class="fas fa-expand"></i></button>
-<button class="btn-icon" title="Mute" id="mute-btn" onclick="toggleMute()" aria-label="Toggle sound"><i class="fas fa-volume-up"></i></button>
 <button class="btn-icon" title="Share" onclick="shareGame()" aria-label="Share game"><i class="fas fa-share-alt"></i></button>
 <button class="btn-icon" title="Refresh" onclick="refreshGame()" aria-label="Refresh game"><i class="fas fa-redo"></i></button>
 <button class="btn-icon" title="Favorite" id="favorite-btn" onclick="toggleFavorite()" aria-label="Add to favorites"><i class="far fa-star"></i></button>
@@ -324,20 +323,15 @@ document.msExitFullscreen();
 }
 }
 
-let isMuted = false;
 
-function toggleMute() {
 const btn = document.getElementById('mute-btn');
 const icon = btn.querySelector('i');
-isMuted = !isMuted;
-if (isMuted) {
 icon.classList.remove('fa-volume-up');
 icon.classList.add('fa-volume-mute');
 btn.setAttribute('title', 'Unmute');
 } else {
 icon.classList.remove('fa-volume-mute');
 icon.classList.add('fa-volume-up');
-btn.setAttribute('title', 'Mute');
 }
 }
 
