@@ -161,6 +161,11 @@ body {
     transition: opacity 0.3s ease;
 }
 
+/* Game play overlay overrides custom-overlay background */
+.game-play-overlay.custom-overlay {
+    background: transparent;
+}
+
 .overlay-content {
     text-align: center;
 }
