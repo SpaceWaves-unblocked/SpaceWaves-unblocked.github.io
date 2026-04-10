@@ -296,6 +296,10 @@ body {
     background-image: url('../images/run-3-thumb.webp');
 }
 
+.space-waves-bg::before {
+    background-image: url('../images/space-back.webp');
+}
+
 .btn-play-image:hover img {
     transform: scale(1.1);
     box-shadow: 0 0 60px rgba(0, 212, 255, 0.6);
