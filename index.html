@@ -233,7 +233,7 @@
 <!-- Custom Play Overlay -->
                                 <div id="custom-play-overlay" class="custom-overlay game-play-overlay space-waves-bg">
                                     <div class="overlay-content">
-                                        <button id="custom-play-btn" class="btn-play-image" onclick="customStartGame()" ontouchstart="customStartGame()" role="button" tabindex="0" aria-label="Start playing Space Waves">
+                                        <button id="custom-play-btn" class="btn-play-image" onclick="customStartGame()" role="button" tabindex="0" aria-label="Start playing Space Waves">
                                             <img src="images/start.webp" alt="Play Space Waves" width="120" height="120">
                                         </button>
                                     </div>
@@ -532,20 +532,8 @@ behavior: 'smooth'
 });
 });
 
-
-const btn = document.getElementById('mute-btn');
-const icon = btn.querySelector('i');
-icon.classList.remove('fa-volume-up');
-icon.classList.add('fa-volume-mute');
-btn.setAttribute('title', 'Unmute');
-} else {
-icon.classList.remove('fa-volume-mute');
-icon.classList.add('fa-volume-up');
-}
-}
-
 function shareGame() {
-if (navigator.share) {
+    if (navigator.share) {
 navigator.share({
 title: document.title,
 url: window.location.href
