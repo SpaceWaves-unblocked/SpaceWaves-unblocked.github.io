@@ -135,7 +135,39 @@ body {
 
 .game-iframe-container {
     position: relative;
+}
+
+/* Mobile Fullscreen Mode */
+.game-iframe-container.fullscreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9999;
     background: var(--darker-navy);
+}
+
+.game-iframe-container.fullscreen .game-iframe {
+    height: 100vh !important;
+}
+
+.mobile-exit-btn {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 10000;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 15px;
+    font-size: 14px;
+    display: none;
+}
+
+.mobile-exit-btn.visible {
+    display: block;
 }
 
 .game-iframe {
