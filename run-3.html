@@ -114,18 +114,21 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
         <div class="container">
-            <a class="navbar-brand" href="/">
+            <a class="navbar-brand" href="./">
                 <img src="images/home-logo.webp" width="160" height="80" class="site-logo" alt="Space Waves Home" loading="eager">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-<ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="geometry-dash.html">Geometry Dash</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="run-3.html">Run 3</a></li>
-                </ul>
-            </div>
+<div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="./">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="./#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="geometry-dash.html">Geometry Dash</a></li>
+          <li class="nav-item"><a class="nav-link active" href="run-3.html">Run 3</a></li>
+          <li class="nav-item"><a class="nav-link" href="./#faq">FAQ</a></li>
+        </ul>
+      </div>
         </div>
     </nav>
 
@@ -249,7 +252,7 @@
             <div class="container">
                 <h2 class="section-title">More Games</h2>
                 <div class="games-grid">
-                    <a href="/" class="game-thumb-link">
+                    <a href="./" class="game-thumb-link">
                         <div class="game-thumb">
                             <img src="images/logo.webp" alt="Space Waves" loading="lazy">
                             <div class="game-thumb-overlay">
@@ -301,38 +304,26 @@
         }
         
 function open_fullscreen() {
-let game = document.getElementById("game-area");
-if (!game) return;
+  let game = document.getElementById("game-area");
+  if (!game) return;
 
-if (!document.fullscreenElement) {
-if (game.requestFullscreen) {
-game.requestFullscreen();
-} else if (game.webkitRequestFullscreen) {
-game.webkitRequestFullscreen();
-} else if (game.msRequestFullscreen) {
-game.msRequestFullscreen();
-}
-} else {
-if (document.exitFullscreen) {
-document.exitFullscreen();
-} else if (document.webkitExitFullscreen) {
-document.webkitExitFullscreen();
-} else if (document.msExitFullscreen) {
-document.msExitFullscreen();
-}
-}
-}
-
-
-const btn = document.getElementById('mute-btn');
-const icon = btn.querySelector('i');
-icon.classList.remove('fa-volume-up');
-icon.classList.add('fa-volume-mute');
-btn.setAttribute('title', 'Unmute');
-} else {
-icon.classList.remove('fa-volume-mute');
-icon.classList.add('fa-volume-up');
-}
+  if (!document.fullscreenElement) {
+    if (game.requestFullscreen) {
+      game.requestFullscreen();
+    } else if (game.webkitRequestFullscreen) {
+      game.webkitRequestFullscreen();
+    } else if (game.msRequestFullscreen) {
+      game.msRequestFullscreen();
+    }
+  } else {
+    if (document.exitFullscreen) {
+      document.exitFullscreen();
+    } else if (document.webkitExitFullscreen) {
+      document.webkitExitFullscreen();
+    } else if (document.msExitFullscreen) {
+      document.msExitFullscreen();
+    }
+  }
 }
 
 function shareGame() {
